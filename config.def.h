@@ -93,35 +93,32 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+#include "themes/nord.h"
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	[0] = themes0,
+	[1] = themes1,
+	[2] = themes2,
+	[3] = themes3,
+	[4] = themes4,
+	[5] = themes5,
+	[6] = themes6,
+	[7] = themes7,
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	[8] = themes8,
+	[9] = themes9,
+	[10] = themes10,
+	[11] = themes11,
+	[12] = themes12,
+	[13] = themes13,
+	[14] = themes14,
+	[15] = themes15,
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	[256] = themes17, // Cursor
+	[257] = themes16, // Revert cursor
+	[258] = themes17, // Foreground
+	[259] = themes16, // Background
 };
 
 
