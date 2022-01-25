@@ -195,8 +195,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,              	XK_minus,       zoom,           {.f = -1} },
 	{ MODKEY,              	XK_equal,       zoomreset,      {.f =  0} },
 
-	{ MODKEY,              	XK_C,           clipcopy,       {.i =  0} },
-	{ MODKEY,              	XK_V,           clippaste,      {.i =  0} },
+	{ MODKEY,              	XK_c,           clipcopy,       {.i =  0} },
+	{ MODKEY,              	XK_v,           clippaste,      {.i =  0} },
 
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
