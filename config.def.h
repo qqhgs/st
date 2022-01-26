@@ -6,6 +6,10 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "JetBrainsMono NFR:pixelsize=14:antialias=true:autohint=true";
+static char *font2[] = {
+/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
+/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+};
 static int borderpx = 2;
 
 /*
@@ -148,8 +152,6 @@ static unsigned int defaultrcs = 257;
 unsigned int bg = 259, bgUnfocused = 259;
 
 /*
- * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
- * Default style of cursor
  * 0: blinking block
  * 1: blinking block (default)
  * 2: steady block ("█")
@@ -285,6 +287,10 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,								XK_d,   				kscrolldown,    {.i = -1} },
 	{ MODKEY|ControlMask, 	XK_k,     			kscrollup,      {.i =  1} },
 	{ MODKEY|ControlMask,		XK_j,   				kscrolldown,    {.i =  1} },
+
+  { MODKEY,								XK_s,						changealpha,		{.f = -0.05} },
+  { MODKEY,								XK_a,						changealpha,		{.f = +0.05} },
+  { MODKEY,								XK_m,						changealpha,		{.f = +2.00} },
 };
 
 /*
